@@ -1,6 +1,76 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block content %}
+    <section class="header">
+        <div class="header_text">
+            <h1>ARCHITECTURE AND CONSTRUCTIONS</h1>
+        </div>
+        <div class="header_sub">
+            <div class="header_item">
+                <h1>Городские Планирование</h1>
+                <p>Создание общественных пространств через гармоничное сочетание экологичности и современности</p>
+            </div>
+            <div class="header_item">
+                <h1>Проектное управление</h1>
+                <p>Многолетний опыт работы, способствующий эффективной реализации проектов в кратчайшие сроки</p>
+            </div>
+            <div class="header_item">
+                <h1>Архитектурные решения</h1>
+                <p>Многолетний опыт работы, способствующий эффективной реализации проектов в кратчайшие сроки</p>
+            </div>
+        </div>
 
-{% endblock %}
+    </section>
+    <h1 style="text-align: center; " class="mobile-h1">Наши проекты</h1>
+    <section class="section">
+        <div class="section_item">
+            {% for item in project %}
+                <div class="pr-1">
+                    <a href="{% url 'project_detail_url' item.pk %}">
+                        {% if item.image1 %}
+                        <img src="{{ item.image1.url }}" alt="" style="width: 100%;height: 100%;transition: 0.5s">
+                        {% endif %}
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="link">
+            <a href="{% url 'projects_url' %}">Все проекты</a>
+        </div>
+    </section>
+    <h1 style="text-align: center">Услуги</h1>
+    <section class="service">
+        <div class="service-item">
+            <img src="{% static 'images/icons/sketch.png' %}" alt="">
+            <a href="#footer" style="text-decoration: none">
+                <span>Дизайн интерьера</span>
+            </a>
+        </div>
+        <div class="service-item">
+            <img src="{% static 'images/icons/measure.png' %}" alt="">
+            <a href="#footer" style="text-decoration: none">
+                <span>Дизайн экстерьера</span>
+            </a>
+        </div>
+        <div class="service-item">
+            <img src="{% static 'images/icons/blueprint.png' %}" alt="">
+            <a href="#footer" style="text-decoration: none">
+                <span>Дизайн ландшафта</span>
+            </a>
+        </div>
+        <div class="service-item">
+            <img src="{% static 'images/icons/city.png' %}" alt="">
+            <a href="#footer" style="text-decoration: none">
+                <span>Архитектурное проектирование</span>
+            </a>
+        </div>
+        <div class="service-item">
+            <img src="{% static 'images/icons/engineer.png' %}" alt="">
+            <a href="#footer" style="text-decoration: none">
+                <span>Ремонт под ключ</span>
+            </a>
+        </div>
+    </section>
+
+{% endblock content %}

@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h3 style="text-align: center">Почему клиенты выбирают нас?</h3>
+    <h1 style="text-align: center">6 преимуществ нашей компании</h1>
+    <section class="why">
+        <div class="why-item">
+            <div class="why-image">
+                <h1>1</h1>
+            </div>
+            <div class="why-text">
+                Внедряем BIM технологии
+            </div>
+        </div>
+        <div class="reversed">
+            <div class="why-image">
+                <h1>2</h1>
+            </div>
+            <div class="why-text">
+                Понимаем ценность архитектурного наследия
+            </div>
+        </div>
+        <div class="why-item">
+            <div class="why-image">
+                <h1>3</h1>
+            </div>
+            <div class="why-text">
+                Продвигаем современный дизайн
+            </div>
+        </div>
+        <div class="reversed">
+            <div class="why-image">
+                <h1>4</h1>
+            </div>
+            <div class="why-text">
+                Реализуем проекты любой сложности
+            </div>
+        </div>
+        <div class="why-item">
+            <div class="why-image">
+                <h1>5</h1>
+            </div>
+            <div class="why-text">
+                Учитываем принципы устойчивой архитектуры
+            </div>
+        </div>
+        <div class="reversed">
+            <div class="why-image">
+                <h1>6</h1>
+            </div>
+            <div class="why-text">
+                Чувствуем пространство и городскую среду
+            </div>
+        </div>
+    </section>
+    <article class="counts">
+        <div class="count">
+            <h1>100%</h1>
+            <p>Гарантия качество</p>
+        </div>
+        <div class="count">
+            <h1>24/7</h1>
+            <p>Консультация</p>
+        </div>
+        <div class="count">
+            <h1>100</h1>
+            <p>Счастливых клиентов</p>
+        </div>
+        <div class="count">
+            <h1>5</h1>
+            <p>Виды оказываемых услуг</p>
+        </div>
+    </article>
+    <h1 style="text-align: center">Услуги</h1>
+    <section class="service">
+        <div class="service-item">
+            <img src="{% static 'images/icons/sketch.png' %}" alt="">
+            <a href="#footer" style="text-decoration: none">
+                <span>Дизайн интерьера</span>
+            </a>
+        </div>
+        <div class="service-item">
+            <img src="{% static 'images/icons/measure.png' %}" alt="">
+            <a href="#footer" style="text-decoration: none">
+                <span>Дизайн экстерьера</span>
+            </a>
+        </div>
+        <div class="service-item">
+            <img src="{% static 'images/icons/blueprint.png' %}" alt="">
+            <a href="#footer" style="text-decoration: none">
+                <span>Дизайн ландшафта</span>
+            </a>
+        </div>
+        <div class="service-item">
+            <img src="{% static 'images/icons/city.png' %}" alt="">
+            <a href="#footer" style="text-decoration: none">
+                <span>Архитектурное проектирование</span>
+            </a>
+        </div>
+        <div class="service-item">
+            <img src="{% static 'images/icons/engineer.png' %}" alt="">
+            <a href="#footer" style="text-decoration: none">
+                <span>Ремонт под ключ</span>
+            </a>
+        </div>
+    </section>
+    <h1 style="text-align: center">Нам доверяют</h1>
+    <section class="trust">
+        <div class="trust gallery">
+            <div class="trust-item box">
+                <img src="" alt="">
+            </div>
+            <div class="trust-item box">
+                <img src="" alt="">
+            </div>
+            <div class="trust-item box">
+                <img src="" alt="">
+            </div>
+            <div class="trust-item box">
+                <img src="" alt="">
+            </div>
+            <div class="trust-item box">
+                <img src="" alt="">
+            </div>
+            <div class="trust-item box">
+                <img src="" alt="">
+            </div>
+            <div class="trust-item box">
+                <img src="" alt="">
+            </div>
+        </div>
+    </section>
+
+    <h1 style="text-align: center">Наши сотрудники({{ page.paginator.count }})</h1>
+    <section class="staff">
+        {% for item in page %}
+        <div class="staff-item">
+            <img src="{{ item.image.url }}" alt="">
+            <span>{{ item.name }}</span>
+        </div>
+        {% endfor %}
+    </section>
+    <div style="margin-top: 40px;text-align: center">
+            {% if page.has_previous %}
+                <b><a href="?page={{ page.previous_page_number }}" style="text-decoration: none;color: white">&lt; пред.</a></b>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+            {% endif %}
+            <span style="text-decoration: none;color: black; font-weight: 600">Часть № {{ page.number }} из {{ paginator.num_pages }}</span>
+            {% if page.has_next %}
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                <b><a href="?page={{ page.next_page_number }}" style="text-decoration: none;color: white"> след. &gt;</a></b>
+            {% endif %}
+        </div>
+{% endblock content %}

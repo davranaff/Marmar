@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+     <h1 style="color: #F04D23;text-align: center">{{ project.name }}</h1>
+     {% if project.image1 and project.image2 and project.image3 %}
+         <div class="slider">
+             <div class="item">
+                <img src="{{ project.image1.url }}">
+             </div>
+             <div class="item">
+                <img src="{{ project.image2.url }}">
+            </div>
+             <div class="item">
+                <img src="{{ project.image3.url }}">
+            </div>
+            <!-- Кнопки-стрелочки -->
+            <a class="previous" onclick="previousSlide()">&#10094;</a>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+        </div>
+     {% endif %}
+    <h1 style="color: #F04D23;text-align: center">Описание</h1>
+    <div class="project-text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci excepturi numquam repudiandae saepe sint. Accusamus accusantium alias aliquid assumenda atque autem beatae culpa delectus, dolore eius excepturi fugiat inventore ipsa, itaque laboriosam magni minima mollitia natus nemo neque obcaecati officia optio quis, quisquam quo recusandae repellendus sint velit veritatis voluptates! Aspernatur beatae doloribus, eaque, earum eos exercitationem incidunt iste, iure iusto modi nulla odit possimus quas sint tenetur voluptas voluptates. Enim esse et itaque quis suscipit voluptatem voluptatibus. Amet architecto aut cumque excepturi illo ipsa iure laboriosam quia suscipit voluptas! Aperiam architecto dignissimos doloremque dolores excepturi explicabo ipsum magnam modi mollitia, natus quidem reiciendis soluta voluptates? Corporis eligendi exercitationem impedit ipsam molestiae, odio quisquam totam voluptas. Consequatur deleniti dolore dolorum ex exercitationem explicabo iste, iusto quae voluptates? Culpa, molestias, voluptatum. Excepturi iste neque quisquam repudiandae. Debitis quibusdam totam voluptatem. Adipisci architecto consequuntur earum inventore nemo nulla voluptatibus! A ab aspernatur aut autem corporis debitis dolor doloremque dolores doloribus dolorum earum error est eveniet expedita explicabo fugit impedit incidunt ipsa iste modi nemo nesciunt nostrum obcaecati quae quaerat repellendus repudiandae sapiente sequi sit tempora totam, ullam vero voluptate. Architecto, corporis earum eveniet facilis harum incidunt, minus mollitia quasi sed sequi temporibus?   </p>
+    </div>
+{% endblock content %}

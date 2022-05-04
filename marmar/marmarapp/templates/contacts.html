@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="contacts">
+        <div class="contact">
+            <div class="contact-item-1">
+                <h3>Свяжетесь с нами</h3>
+                <div class="contact-data">
+                    <p>Телефон: +998 55 500-90-99</p>
+                    <p>Почта: info@marmardesign.uz</p>
+                    <p>Адрес: Город Бухара, ул. проспект Алишер Навои, 5А дом</p>
+                </div>
+                <div class="contact-icons">
+                    <a href="https://t.me/marmardesign_uz">
+                        <img src="{% static 'images/icons/telegram.png' %}" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/marmardesign.uz">
+                        <img src="{% static 'images/icons/instagram-logo.png' %}" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="contact-item-2">
+                <form action="{% url 'get_contact_url' %}" method="GET" class="cform">
+                    <label>Имя:</label>
+                    <input type="text" name="name" required>
+                    <label>Номер телефона:</label>
+                    <input type="tel" name="number" value="+998" maxlength="13" required>
+                    <label>Текст:</label>
+                    <textarea name="text" rows="3" maxlength="200"></textarea>
+                    <button>Связаться</button>
+                </form>
+            </div>
+        </div>
+        <img src="{% static 'images/fon.jpg' %}" alt="" class="fon">
+    </section>
+{% endblock content %}

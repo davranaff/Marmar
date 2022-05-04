@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <section class="reviews-form">
+        <form action="{% url 'get_review_url' %}" method="GET" class="rform">
+            <label>Имя:</label>
+            <input type="text" name="name" required>
+            <label>Текст:</label>
+            <textarea name="text" rows="3" maxlength="200" required></textarea>
+            <button>Оставить Отзыв</button>
+        </form>
+        <div class="reviews">
+            <h1>Все отзывы ({{ page.paginator.count }})</h1>
+            {% for item in page %}
+            <div class="ureviews">
+                <h3>{{ item.name }}</h3>
+                <hr>
+                <p>
+                    {{ item.text }}
+                </p>
+            </div>
+            {% endfor %}
+            <div style="margin-top: 10px" class="paginator">
+                    {% if page.has_previous %}
+                        <b><a href="?page={{ page.previous_page_number }}" style="text-decoration: none;color: white">&lt; пред.</a></b>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+                    {% endif %}
+                    <span style="text-decoration: none;color: white">Часть № {{ page.number }} из {{ paginator.num_pages }}</span>
+                    {% if page.has_next %}
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+                        <b><a href="?page={{ page.next_page_number }}" style="text-decoration: none;color: white"> след. &gt;</a></b>
+                    {% endif %}
+            </div>
+        </div>
+        <div class="rec1"></div>
+        <div class="rec2">
+            Оставьте отзыв
+        </div>
+        <div class="rec4"></div>
+        <div class="rec3"></div>
+        <div class="rec5"></div>
+    </section>
+{% endblock content %}

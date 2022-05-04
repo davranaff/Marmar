@@ -1,0 +1,473 @@
+@media screen and (max-width:768px) {
+    .navbar-logo {
+        height: 70px;
+    }
+    .navbar div a {
+        padding: 4px 40px;
+        font-size: 14px;
+    }
+    .section {
+        padding: 0 20px;
+        margin: 15px 0;
+    }
+    .link {
+        margin-top: 10px;
+    }
+    .link a {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+    .pr-1 {
+        height: 170px;
+    }
+    .article {
+        padding: 0 70px;
+        margin: 35px 0;
+    }
+    .services {
+        width: 32%;
+        height: 200px;
+    }
+    .footer-form input {
+        width: 35%;
+        padding: 10px;
+        font-size: 13px;
+    }
+    .form button {
+        width: 15%;
+        font-size: 12px;
+    }
+    .footer {
+        padding: 0 70px;
+        margin: 35px 0;
+    }
+    .footer-form {
+        height: 150px;
+    }
+    .about {
+        padding: 0 70px;
+    }
+    .info {
+        margin: 20px 0;
+    }
+    .counts {
+        padding: 20px 70px;
+    }
+    .count h1 {
+        font-size: 40px;
+    }
+    .count p {
+        font-size: 15px;
+    }
+    .why {
+        padding: 0 70px;
+    }
+    .why-item , .reversed{
+        margin: 15px 0;
+    }
+    .why-image {
+        margin-left: 0px;
+        height: 60px;
+    }
+    .why-image h1 {
+        font-size: 20px;
+    }
+    .why-text {
+        padding: 6px;
+    }
+    .service {
+        padding: 10px 70px;
+    }
+    .service-item span {
+        font-size: 15px;
+    }
+    .staff {
+        padding: 0 70px;
+    }
+    .staff-item {
+        height: 150px;
+        padding: 5px;
+        margin-top: 5px;
+    }
+    .staff-item span {
+        font-size: 12px;
+    }
+    .reviews-form {
+        padding: 0 70px;
+    }
+    .rec2 {
+        left: 50px;
+        top: 50px;
+        width: 100px;
+        height: 50px;
+        font-size: 12px;
+    }
+    .rform {
+        width: 500px;
+        font-size: 12px;
+        padding: 10px;
+    }
+    .rform input {
+        font-size: 12px;
+        padding: 7px;
+    }
+    .rform textarea {
+        font-size: 12px;
+    }
+    .reviews {
+        width: 500px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+    .reviews h1 {
+        font-size: 20px;
+    }
+    .ureviews {
+        padding: 5px;
+        margin: 5px 0;
+    }
+    .ureviews h3 {
+        font-size: 15px;
+    }
+    .ureviews p {
+        font-size: 12px;
+    }
+    .contacts {
+        height: 500px;
+    }
+    .contact {
+        width: 600px;
+    }
+    .contact-item-1 {
+        width: 30%;
+    }
+    .contact-item-2 {
+        width: 60%;
+        height: 350px;
+    }
+    .cform {
+        padding: 10px;
+    }
+    .cform input {
+        padding: 4px;
+        font-size: 13px;
+    }
+    .cform label {
+        margin: 10px 0 5px 0;
+        font-size: 14px;
+    }
+    .cform textarea {
+        padding: 5px;
+        font-size: 13px;
+    }
+    .contact-item-1 h1 {
+        margin: 0 0 10px 0;
+    }
+    .contact-data p {
+        font-size: 12px;
+    }
+    .footer-contacts {
+        padding: 20px 70px;
+        font-size: 12px;
+    }
+    .footer-c-item {
+        width: 32%;
+    }
+    .footer-c-item div {
+        width: 100%;
+    }
+    .service-item img {
+        width: 30px;
+    }
+    .service-item span{
+        font-size: 12px;
+    }
+    .header {
+        height: 500px;
+    }
+    .header_text {
+        height: auto;
+    }
+    .header_text h1 {
+        font-size: 35px;
+    }
+    .header_item {
+        padding: 10px 15px;
+    }
+    .header_item h1 {
+        font-size: 19px;
+    }
+    .header_item p {
+        font-size: 14px;
+    }
+    .pr-1 {
+        height: 200px;
+    }
+    .why-text {
+        font-size: 15px;
+    }
+    .why .active .why-text {
+        font-size: 18px;
+    }
+    .project-text {
+        padding: 10px 40px;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .why-text {
+        font-size: 13px;
+    }
+    .why .active .why-text {
+        font-weight: bolder;
+        font-size:14px ;
+    }
+    .header {
+        height: 280px;
+        align-items: start;
+    }
+    .header_text h1 {
+        margin-top: 80px;
+        font-size: 22px;
+    }
+    .header_sub {
+        bottom: -450px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mobile-h1 {
+        margin-top:500px;
+    }
+    .header_item {
+        width: 50%;
+        margin: 10px;
+        height: 150px;
+    }
+    .navbar-logo {
+        height: 40px;
+    }
+    .navbar {
+        height: 30px;
+        padding: 0;
+    }
+    .navbar div a {
+        padding: 1px 9px;
+        font-size: 11px;
+    }
+    .section {
+        flex-direction: column;
+        padding: 0 10px;
+        margin: 10px 0;
+        align-items: center;
+    }
+    .link a {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+    .pr-1 {
+        width: 100%;
+        height: 250px;
+    }
+    .article {
+        flex-direction: column;
+        padding: 0 10px;
+        margin: 10px 0;
+    }
+    .services{
+        width: 100%;
+        margin: 10px 0;
+        height: 120px;
+    }
+    .footer {
+        padding: 0 10px;
+        margin: 20px 0;
+    }
+    .footer h1 {
+        font-size: 16px;
+    }
+    .form {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .form input {
+        margin: 10px 0;
+        width: auto;
+    }
+    .form button {
+        width: auto;
+        padding: 10px;
+    }
+    .about {
+        margin: 20px 0;
+        padding: 0 10px;
+    }
+    .info img {
+        display: none;
+    }
+    .info-item {
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+    .info-item h1 {
+        font-size: 20px;
+    }
+    .info-item p {
+        font-size: 14px;
+    }
+    .counts {
+        background-color: rgba(166, 166, 166, 0.31);
+        padding: 15px 10px;
+        margin: 20px 0;
+    }
+    .count {
+        width: 25%;
+    }
+    .count h1 {
+        font-size: 25px;
+    }
+    .count p {
+        font-size: 11px;
+    }
+    .why {
+        padding: 0 10px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    .why h1 {
+        font-size: 16px;
+    }
+    .why-item {
+        margin: 10px 0;
+    }
+    .reversed {
+        margin: 10px 0;
+    }
+    .why-image {
+        margin-left: 0px;
+        height: auto;
+    }
+    .why-text {
+        height: 50px;
+    }
+    .service {
+        padding: 0 10px;
+        flex-direction: column;
+    }
+    .service-item {
+        width: auto;
+        margin: 5px 0;
+    }
+    .service-item span{
+        font-size: 18px;
+        font-weight: normal;
+    }
+    .staff {
+        padding: 0 10px;
+    }
+    .staff-item {
+        width: 44%;
+        height: 150px;
+    }
+    .reviews-form {
+        padding: 0 10px;
+        height: 900px;
+    }
+    .rec2 {
+        width: 90px;
+        height: 35px;
+        font-size: 10px;
+        left: 10px;
+        top: 10px;
+    }
+    .rform {
+        width: 380px;
+        padding: 5px;
+    }
+    .rform input {
+        font-size: 10px;
+        padding: 5px;
+        margin: 5px 0;
+    }
+    .rform label {
+        font-size: 10px;
+    }
+    .rform textarea {
+        font-size: 10px;
+        padding: 5px;
+    }
+    .rform button {
+        height: 20px;
+        font-size: 10px;
+    }
+    .reviews {
+        width: 380px;
+        padding: 5px;
+    }
+    .reviews h1 {
+        font-size: 13px;
+    }
+    .ureviews {
+        padding: 3px;
+    }
+    .ureviews h3 {
+        font-size: 13px;
+    }
+    .ureviews p {
+        font-size: 10px;
+    }
+    .paginator {
+        font-size: 10px;
+    }
+    .contacts {
+        height: 900px;
+    }
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+    .footer-contacts {
+        padding: 0 10px;
+        flex-direction: column;
+    }
+    .footer-c-item {
+        width: auto;
+        text-align: center;
+        font-size: 16px;
+    }
+    .fon {
+        width: 100%;
+        height: 100%;
+    }
+    .contact-item-1 {
+        width: auto;
+    }
+    .contact-item-2 {
+        width: 100%;
+    }
+    .cform {
+        width: auto;
+    }
+    .project-text {
+        padding: 10px 30px;
+    }
+    .section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .gallery {
+        width: 100%;
+    }
+    .trust {
+        width: 100%;
+        padding: 0 10px;
+    }
+}

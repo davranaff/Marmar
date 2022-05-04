@@ -1,26 +1,65 @@
 {% load static %}
-<!DOCTYPE html>
-<html style="background: white">
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Marmar</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'index.css' %}">
+    <link rel="stylesheet" href="{% static 'media.css' %}">
+    <title>Marmar</title>
 </head>
 <body>
     <nav class="navbar-main">
         <div class="navbar-logo">
-            <img src="" alt="">
+            <a href="{% url 'home_page_url' %}">
+                <img src="{% static 'images/' %}" alt="Логотип">
+            </a>
         </div>
         <div class="navbar">
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
+            <div>
+                <a href="{% url 'home_page_url' %}" style="border-right: 1px solid black;">Главная</a>
+                <a href="{% url 'about_url' %}" style="border-right: 1px solid black;">О нас</a>
+                <a href="{% url 'reviews_url' %}" style="border-right: 1px solid black;">Отзывы</a>
+                <a href="{% url 'projects_url' %}" style="border-right: 1px solid black;">Проекты</a>
+                <a href="{% url 'contacts_url' %}">Контакты</a>
+            </div>
         </div>
     </nav>
     {% block content %}
+    {% endblock content %}
+    <section class="footer" id="footer">
+        <h1 style="text-align: center">Форма для обратной связи</h1>
+        <div class="footer-form">
+            <form action="{% url 'get_contact_url' %}" class="form">
+                <input type="text" name="name" placeholder="Имя" required>
+                <input type="text" name="number" placeholder="Номер телефона" required>
+                <button>Отправить</button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer-contacts">
+        <div class="footer-c-item">
+            <h3>Услуги</h3>
+            <p>Дизайн интерьера</p>
+            <p>Дизайн экстерьера</p>
+            <p>Дизайн ландшафта</p>
+            <p>Архитектурное проектирование</p>
+            <p>Ремонт под ключ</p>
+        </div>
+        <div class="footer-c-item">
+            <h3>О нас</h3>
+            <p>Телефон: +998 55 500-90-99</p>
+            <p>Почта: info@marmardesign.uz</p>
+            <p>Адрес: Город Бухара, ул. проспект Алишер Навои, 5А дом</p>
+        </div>
+        <div class="footer-c-item">
+            <div style="position:relative;overflow:hidden;border: none;outline: none"><a href="https://yandex.uz/maps/10330/bukhara/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Бухара</a><a href="https://yandex.uz/maps/10330/bukhara/?ll=64.445628%2C39.770389&utm_medium=mapframe&utm_source=maps&z=18.05" style="color:#eee;font-size:12px;position:absolute;top:14px;">Бухара — Яндекс Карты</a><iframe src="https://yandex.uz/map-widget/v1/-/CCUFEFUL2B" width="360" height="200px"  allowfullscreen="true" style="position:relative;border:1px solid black"></iframe></div>
+        </div>
+    </footer>
 
-    {% endblock %}
+    <script src="{% static 'js/index.js' %}">
+
+    </script>
 </body>
 </html>
